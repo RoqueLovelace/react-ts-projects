@@ -80,3 +80,17 @@ button:focus-visible {
   text-decoration: line-through;
   text-decoration-thickness: 2px;
 }
+
+.hr-with-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.hr-with-text::before,
+.hr-with-text::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid aliceblue;
+  margin: 0 10px;
+}
