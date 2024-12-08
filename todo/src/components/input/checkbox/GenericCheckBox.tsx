@@ -14,7 +14,7 @@ const GenericCheckBox: React.FC<GenericCheckBoxProps> = ({ titulo, completado, h
   };
 
   return (
-    <div id={cbIndex.toString()} className={classNames('flex items-center m-5', { tachado: completado })}>
+    <div id={cbIndex.toString()} className={classNames('flex items-center', { tachado: completado })}>
       <input
         onChange={handleChange}
         type="checkbox"

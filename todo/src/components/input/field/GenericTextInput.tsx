@@ -4,7 +4,7 @@ import GenericButton from '../button/GenericButton';
 interface GenericTextInputProps {
   titulo: string;
   onTituloChange: (newTitle: string) => void;
-  onClick: () => void;
+  onClick: (id: string) => void;
 }
 
 const GenericTextInput: React.FC<GenericTextInputProps> = ({ titulo, onClick, onTituloChange }) => {
@@ -12,7 +12,6 @@ const GenericTextInput: React.FC<GenericTextInputProps> = ({ titulo, onClick, on
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     onTituloChange(event.target.value);
   };
-
 
   return (
     <div className="flex m-5">
@@ -25,7 +24,7 @@ const GenericTextInput: React.FC<GenericTextInputProps> = ({ titulo, onClick, on
         required
         onChange={handleOnChange}
       />
-      <GenericButton onClick={onClick} />
+      <GenericButton onClick={onClick} titulo="Agregar" id='btnAgregar' />
     </div>
   );
 };
