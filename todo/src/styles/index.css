@@ -15,6 +15,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  height: 100vh;
 }
 
 a {
@@ -31,6 +33,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -93,4 +96,23 @@ button:focus-visible {
   flex: 1;
   border-bottom: 1px solid aliceblue;
   margin: 0 10px;
+}
+
+.todo {
+  overflow: scroll;
+  display: flex;
+  justify-content: flex-start;
+  height: 90vh;
+  width: 50vw;
+}
+
+
+@media (max-width: 500px) {
+  .todo {
+    overflow: scroll;
+    display: flex;
+    justify-content: flex-start;
+    height: 70vh;
+    width: 95vw;
+  }
 }
